@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>VIRIATO, EL Nº1 - Biografía Oficial</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0b1220;
+      color: #e5e7eb;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 900px;
+      width: 100%;
+      margin: 24px;
+      background: rgba(15, 23, 42, 0.95);
+      border-radius: 18px;
+      padding: 24px 24px 32px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.55);
+      border: 1px solid rgba(148,163,184,0.4);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: linear-gradient(90deg, #22c55e, #3b82f6);
+      color: #020617;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin-top: 10px;
+      margin-bottom: 4px;
+      font-size: 2.2rem;
+    }
+
+    .subtitle {
+      color: #9ca3af;
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1.2fr;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      border-radius: 14px;
+      padding: 14px 16px;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(75,85,99,0.7);
+      margin-bottom: 14px;
+    }
+
+    .card-title {
+      font-weight: 600;
+      margin-bottom: 6px;
+      font-size: 1rem;
+      color: #e5e7eb;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 0.92rem;
+      color: #cbd5f5;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .tag {
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      border: 1px solid rgba(148,163,184,0.6);
+      color: #e5e7eb;
+    }
+
+    .section-title {
+      margin-top: 22px;
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title span {
+      font-size: 1.3rem;
+    }
+
+    ul {
+      margin-top: 4px;
+      padding-left: 18px;
+      font-size: 0.95rem;
+      color: #d1d5db;
+    }
+
+    li {
+      margin-bottom: 4px;
+    }
+
+    .timeline {
+      border-left: 2px solid rgba(148,163,184,0.6);
+      margin-top: 10px;
+      padding-left: 12px;
+    }
+
+    .timeline-item {
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 8px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -15px;
+      top: 4px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 0 4px rgba(34,197,94,0.25);
+    }
+
+    .timeline-year {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #9ca3af;
+    }
+
+    .quote {
+      margin-top: 14px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: rgba(15,23,42,0.9);
+      border: 1px dashed rgba(148,163,184,0.7);
+      font-size: 0.9rem;
+      color: #e5e7eb;
+    }
+
+    .quote span {
+      font-weight: 600;
+      color: #22c55e;
+    }
+
+    .footer {
+      margin-top: 22px;
+      font-size: 0.78rem;
+      color: #6b7280;
+      text-align: center;
+    }
+
+    .correa {
+      color: #fb7185;
+      font-weight: 600;
+    }
+
+    .couple-card {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 0.93rem;
+    }
+
+    .highlight {
+      color: #38bdf8;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <span class="badge">Biografía no oficial</span>
+    <h1>VIRIATO, EL Nº1</h1>
+    <p class="subtitle">
+      Brigadier de leyenda, jefe de pelotón entre semana, esclavo de la <span class="correa">correa emocional</span> los fines de semana.
+    </p>
+
+    <div class="grid">
+      <!-- Lado izquierdo -->
+      <div>
+        <div class="card">
+          <div class="card-title">Quién es Viriato</div>
+          <p>
+            Conocido en los pasillos como <span class="highlight">“VIRIATO, EL Nº1”</span>, es el típico brigadier
+            que aparece cuando hay lío, pone orden en 10 segundos y se va como si nada hubiera pasado.
+            Amante del uniforme planchado al milímetro y enemigo natural del “ya si eso”.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Brigadier</span>
+            <span class="tag">Mando respetado</span>
+            <span class="tag">Líder nato</span>
+            <span class="tag">Fan del café de rancho</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Perfil táctico</div>
+          <ul>
+            <li>Especialista en poner firmes a un pelotón recién levantado.</li>
+            <li>Capaz de detectar un fallo en el uniforme a 300 metros.</li>
+            <li>Domina el arte de la bronca justa: corta, clara y sin rencor.</li>
+            <li>Experto en maniobras, ejercicios y “que no cunda el pánico”.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Lado derecho -->
+      <div>
+        <div class="card">
+          <div class="card-title">Hazañas como brigadier</div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-year">Operación "Formación Perfecta"</div>
+              <p>
+                Logró que todo un pelotón entrara en formación a la primera, sin voces, sin líos
+                y a la hora exacta. A día de hoy, nadie sabe cómo lo consiguió.
+              </p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">Ejercicio "Nunca se llega tarde"</div>
+              <p>
+                Tras una noche con casi cero descanso, presentó a su unidad lista, motivada
+                y con cara de haber dormido ocho horas. La leyenda dice que usa café en vena.
+              </p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">Misión "Caos controlado"</div>
+              <p>
+                En un ejercicio conjunto, cuando todo se desmadraba, Viriato repartió órdenes claras,
+                recolocó unidades y convirtió el caos en una maniobra de libro.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Estilo de mando</div>
+          <p>
+            Directo, claro y con toque clásico: la palabra dada es orden, el ejemplo va primero y el
+            móvil se mira después. Es de los que piensa que si algo se hace, se hace bien, y si no,
+            se repite.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Novia y correa -->
+    <div class="section-title">
+      <span>💘</span> Su novia: la única que manda más que él
+    </div>
+    <div class="card">
+      <div class="couple-card">
+        <p>
+          Si en el cuartel Viriato es <span class="highlight">EL Nº1</span>, en casa la cosa cambia. Ahí la que
+          manda es ella. Su novia no lleva galones, pero tiene algo mucho más poderoso:
+          <span class="correa">la correa invisible</span>.
+        </p>
+        <p>
+          Es la que le recuerda:
+        </p>
+        <ul>
+          <li>“A las 20:00 en casa, que mañana madrugas”.</li>
+          <li>“Deja el móvil del grupo y ven a cenar”.</li>
+          <li>“Hoy plan de sofá, nada de maniobras con los colegas”.</li>
+        </ul>
+        <p>
+          Y lo mejor de todo: él presume de brigadier, pero también presume de novia.
+          Porque aunque diga que lo tiene con correa, en el fondo sabe que gracias a ella:
+        </p>
+        <ul>
+          <li>Llega descansado a las guardias.</li>
+          <li>No se alimenta solo de bocatas y café.</li>
+          <li>Y alguien le recuerda que la vida no es solo servicio, también momentos juntos.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Frases míticas -->
+    <div class="section-title">
+      <span>📢</span> Frases míticas de VIRIATO, EL Nº1
+    </div>
+    <div class="card">
+      <div class="quote">
+        <p><span>“En formación se corre, en casa se obedece.”</span></p>
+      </div>
+      <div class="quote">
+        <p><span>“Mando un pelotón, pero la agenda me la manda mi novia.”</span></p>
+      </div>
+      <div class="quote">
+        <p><span>“La disciplina empieza por uno mismo… y por contestar los WhatsApp a tiempo.”</span></p>
+      </div>
+    </div>
+
+    <!-- Cierre -->
+    <div class="footer">
+      Biografía no oficial de VIRIATO, EL Nº1. Cualquier parecido con la realidad es pura
+      puntería.
+    </div>
+  </div>
+</body>
+</html>
